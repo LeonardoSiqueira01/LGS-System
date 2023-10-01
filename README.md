@@ -1,7 +1,9 @@
-##LGS System
+## LGS System
 
 Api com funcionalidades Crud e tratamento de exceções,interface feita através do Swagger UI, api integrada ao railway o banco de dados PostgreSQL sendo realizado o deploy na nuvem.
 Ela tem suporte para: Cadastrar, deletar, atualizar, procurar por id, listar todos os usuarios; Cadastrar, deletar, atualizar, procurar por id, listar todos os produtos;Listar todos, ouu por Id os pedidos e categorias de produtos.
+
+
 ## Diagrama de Classes
 
  ```mermaid
@@ -68,7 +70,7 @@ Usuario"1" <|.."1..N" pedido
 OrdemPedido .. Pedido
 OrdemPedido..Produto
 StatusPedido..Pedido
-
-
-LINK DA API: https://lgs-system.up.railway.app/swagger-ui.html
+```
+<h4> Link da API para testa-lá : https://lgs-system.up.railway.app/swagger-ui.html</h4>
+<img src="swagger.png">
 
