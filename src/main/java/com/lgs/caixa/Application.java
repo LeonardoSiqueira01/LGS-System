@@ -2,9 +2,12 @@ package com.lgs.caixa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan({ "com.lgs*" })
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.servers.Server;
+
+@OpenAPIDefinition(servers = { @Server(url = "/", description = "URL Padrao") })
+
 @SpringBootApplication
 public class Application {
 
