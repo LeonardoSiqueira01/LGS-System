@@ -1,8 +1,16 @@
 ## LGS System
 
-Api com funcionalidades Crud e tratamento de exceções,interface feita através do Swagger UI, api integrada ao railway o banco de dados PostgreSQL sendo realizado o deploy na nuvem.
-Ela tem suporte para: Cadastrar, deletar, atualizar, procurar por id, listar todos os usuarios; Cadastrar, deletar, atualizar, procurar por id, listar todos os produtos;Listar todos, ouu por Id os pedidos e categorias de produtos.
-
+<div>Api com funcionalidades Crud e tratamento de exceções,interface feita através do Swagger UI, api integrada ao railway o banco de dados PostgreSQL sendo realizado o deploy na nuvem.</div>
+<div>Ela tem suporte para: Cadastrar, deletar, atualizar, procurar por id, listar todos os usuarios; Cadastrar, deletar, atualizar, procurar por id, listar todos os produtos;Listar todos, ouu por Id os pedidos e categorias de produtos.</div>
+<h5>Tecnologias Utilizadas</h5>
+<p>Java |SpringBoot |Swagger UI |PostgreSQL |Deploy com RailWay </p>
+<div>
+ <img align="center" alt="Leo-JAVA" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg">
+   <img align="center" alt="Leo-Spring" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg">
+      <img align="center" alt="Leo-Tomcat" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tomcat/tomcat-original.svg">
+         <img align="center" alt="Leo-Postgresql" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg">
+     <img align="center" alt="Leo-Git" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg">
+</div>
 
 ## Diagrama de Classes
 
@@ -71,6 +79,6 @@ OrdemPedido .. Pedido
 OrdemPedido..Produto
 StatusPedido..Pedido
 ```
-<h4> Link da API para testa-lá : https://lgs-system.up.railway.app/swagger-ui.html</h4>
+<h4> Link da API para testa-lá : https://lgs-system.up.railway.app/swagger-ui.html  :sunglasses: :point_down:</h4> 
 <img src="swagger.png">
 
