@@ -6,21 +6,20 @@ Api Rest para cadastro de usuários, produtos e pedidos. Sendo todas entidades v
 
  ```mermaid
 
-Modelo de domínio
-
+classDiagram
 class Produto{
 -Integer id
 -String nome
 -String descricao
 -Double preco
 -Set<Categoria> categorias
--Set<OrdemDePedidos> itens
+-OrdemDePedidos[] itens
 
 }
 class Categoria{
 -Long id
 -String nome
--Set<Produto> produtos
+-Produto[] produtos
 }
 
 class OrdemPedido{
@@ -53,20 +52,19 @@ class Usuario{
 -List<Pedido> pedidos 
 
 }
-
-Enum Status pedido{
--int ESPERANDO_PAGAMENTO
--int PAGO
--int ENVIADO
--int ENTREGUE
--int CANCELADO
--int codigo
-+SubTotal()double
+class StatusPedido{
+    <<enumeration>>
+    ESPERANDO_PAGAMENTO
+    PAGO
+    ENVIADO
+    ENTREGUE
+    CANCELADO
 }
 
-Pedido "1..N" <-- "1"OrdemPedido
-Categoria"1"  <-- "N"Produto
-Pagamento"1" -- "1"pedido
-Usuario"1" <--"1..N" pedido
-
-
+Pedido "1..N" <|.. "1"OrdemPedido
+Categoria"1"  <|.. "N"Produto
+Pagamento"1" <|.. "1"pedido
+Usuario"1" <|.."1..N" pedido
+OrdemPedido .. Pedido
+OrdemPedido..Produto
+StatusPedido..Pedido
