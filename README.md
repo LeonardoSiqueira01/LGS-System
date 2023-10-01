@@ -1,7 +1,72 @@
-# WEB-SERVICE_SPRINGBOOT_JPA-HIBERNATE
-Projeto Spring boot, aonde foi realizado a implementação do modelo de domínio, estruturação das camadas lógicas: resource, service, repository,  Configuração do banco de dados de teste (H2). Povoar o banco de dados, criação do CRUD e tratamento das exceções, projeto implantado no Heroku.
-<p>Spring Boot | JPA + Hibernate | Web services | H2 database | Heroku | Postman</p>
+##LGS System
 
- <img align="left" alt="Leo-JAVA" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg">
-   <img align="left" alt="Leo-Spring" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg">
-   
+Api Rest para cadastro de usuários, produtos e pedidos. Sendo todas entidades vinculadas entre si.
+
+## Diagrama de Classes
+
+ ```mermaid
+
+Modelo de domínio
+
+class Produto{
+-Integer id
+-String nome
+-String descricao
+-Double preco
+-Set<Categoria> categorias
+-Set<OrdemDePedidos> itens
+
+}
+class Categoria{
+-Long id
+-String nome
+-Set<Produto> produtos
+}
+
+class OrdemPedido{
+-OrdemPedidoPK id
+-Integer quantidade
+-Double preco
+}
+
+class Pedido {
+-Long id
+-Instant Momento
+-Integer pedidoStatus
+-Usuario usuário
+-Pagamento pagamento
++total()double
+}
+
+class Pagamento{
+-Long id
+-Instant momento
+-Pedido pedido
+}
+
+class Usuario{
+-Long id
+-String nome
+-String email
+-String telefone
+-String senha
+-List<Pedido> pedidos 
+
+}
+
+Enum Status pedido{
+-int ESPERANDO_PAGAMENTO
+-int PAGO
+-int ENVIADO
+-int ENTREGUE
+-int CANCELADO
+-int codigo
++SubTotal()double
+}
+
+Pedido "1..N" <-- "1"OrdemPedido
+Categoria"1"  <-- "N"Produto
+Pagamento"1" -- "1"pedido
+Usuario"1" <--"1..N" pedido
+
+
